@@ -1,8 +1,9 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 
 function Cart(){
+  const navigate = useNavigate();
   const { cartItems, updateQuantity, removeFromCart } = useContext(CartContext);
 
   const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
@@ -85,7 +86,7 @@ function Cart(){
                 <span>${total.toFixed(2)}</span>
               </div>
 
-              <button className="checkout-btn">
+              <button className="checkout-btn" onClick={() => navigate("/checkout")}>
                 Proceed to Checkout
               </button>
               <Link to="/shop" className="continue-shopping">

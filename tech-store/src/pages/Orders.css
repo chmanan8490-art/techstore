@@ -1,0 +1,274 @@
+.orders-page {
+    min-height: 90vh;
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.orders-page .page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+}
+
+.orders-page .page-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.orders-page .page-header p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.orders-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.orders-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.order-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.order-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.order-header {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e0e7ff 100%);
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+}
+
+@media (max-width: 600px) {
+    .order-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+.order-info h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+
+.order-date {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.order-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-badge.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-badge.shipped {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.status-badge.delivered {
+    background: #d4edda;
+    color: #155724;
+}
+
+.order-total {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ff6b6b;
+}
+
+.order-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-bottom: 1px solid #eee;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail .label {
+    font-size: 0.85rem;
+    color: #999;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.detail .value {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.order-items-preview {
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.order-items-preview h4 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.order-items-preview ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.order-items-preview li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.order-items-preview li:last-child {
+    border-bottom: none;
+}
+
+.item-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.item-details {
+    flex: 1;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.item-price {
+    font-weight: 600;
+    color: #333;
+    min-width: 80px;
+    text-align: right;
+}
+
+.order-address {
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-bottom: 1px solid #eee;
+}
+
+.order-address h4 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.order-address p {
+    margin: 0.3rem 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.order-footer {
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.view-details-btn {
+    flex: 1;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.view-details-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+.empty-orders {
+    background: white;
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.empty-orders h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.empty-orders p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.shop-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.shop-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}

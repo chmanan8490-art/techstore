@@ -43,8 +43,20 @@ export function CartProvider({ children }) {
     return cartItems.reduce((total, item) => total + item.quantity, 0);
   };
 
+  const getCartTotal = () => {
+    const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const shipping = subtotal > 50 ? 0 : 5.99;
+    const tax = subtotal * 0.08;
+    return {
+      subtotal: subtotal.toFixed(2),
+      shipping: shipping.toFixed(2),
+      tax: tax.toFixed(2),
+      total: (subtotal + shipping + tax).toFixed(2)
+    };
+  };
+
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, updateQuantity, clearCart, getCartCount }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, updateQuantity, clearCart, getCartCount, getCartTotal }}>
       {children}
     </CartContext.Provider>
   );

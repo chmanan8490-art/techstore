@@ -24,6 +24,8 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Checkout from "./pages/Checkout";
 import Profile from "./pages/Profile";
+import OrderConfirmation from "./pages/OrderConfirmation";
+import Orders from "./pages/Orders";
 
 
 
@@ -73,6 +75,10 @@ element={<ProductDetail/>}
 <Route path="/checkout" element={<Checkout/>}/>
 
 <Route path="/profile" element={<Profile/>}/>
+
+<Route path="/order-confirmation/:orderId" element={<OrderConfirmation/>}/>
+
+<Route path="/orders" element={<Orders/>}/>
 
 </Routes>
 
