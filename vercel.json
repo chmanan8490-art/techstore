@@ -1,0 +1,4 @@
+{
+  "buildCommand": "cd tech-store && npm install && npm run build",
+  "outputDirectory": "tech-store/dist"
+}
